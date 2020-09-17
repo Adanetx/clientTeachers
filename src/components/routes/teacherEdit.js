@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import CategoryForm from '../shared/categoryForm'
+import TeacherForm from '../shared/teacherForm'
 import apiUrl from '../../apiConfig'
 import axios from 'axios'
 import { withRouter } from 'react-router'
@@ -88,7 +88,7 @@ class TeacherEdit extends Component {
 
     return (
       <div>
-        <CategoryForm
+        <TeacherForm
           teacher ={teacher}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
