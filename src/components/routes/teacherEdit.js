@@ -26,7 +26,7 @@ class TeacherEdit extends Component {
     axios(`${apiUrl}/teachers/${this.props.match.params.id}`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       }
     })
       .then(res => this.setState({ teacher: res.data.teacher }))
@@ -50,7 +50,7 @@ class TeacherEdit extends Component {
       url: `${apiUrl}/teachers/${this.props.match.params.id}`,
       method: 'PATCH',
       headers: {
-        'Authorization': `Bearer ${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       },
       data: { teacher: this.state.teacher }
     })

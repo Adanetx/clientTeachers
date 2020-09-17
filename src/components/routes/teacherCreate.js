@@ -40,7 +40,7 @@ class TeacherCreate extends Component {
       url: `${apiUrl}/teachers`,
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       },
       data: { teacher: this.state.teacher }
     })

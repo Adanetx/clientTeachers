@@ -62,7 +62,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/teachers' render={ () => (
             <teachers user={user} msgAlert={this.msgAlert} setCreatedId={this.setCreatedId}/>
           )}/>
-          <AuthenticatedRoute user={user} exact path='/teachers-create' render={ () => (
+          <AuthenticatedRoute user={user} exact path='/teach' render={ () => (
             <teacherCreate user={user} msgAlert={this.msgAlert} setCreatedId={this.setCreatedId}/>
           )}/>
           <AuthenticatedRoute user={user} exact path='/teachers/:id' render={ (props) => (

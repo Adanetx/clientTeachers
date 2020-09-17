@@ -24,7 +24,7 @@ class Teachers extends Component {
       url: `${apiUrl}/teachers`,
       method: 'GET',
       headers: {
-        'Authorization': `Token=${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       }
     })
       .then(res => this.setState({ teachers: res.data.teachers }))
