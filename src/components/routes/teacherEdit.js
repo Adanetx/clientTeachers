@@ -21,11 +21,7 @@ class TeacherEdit extends Component {
       updated: false
     }
   }
-  // componentDidMount () {
-  //   axios(`${apiUrl}/categories/${this.props.match.params.id}`)
-  //     .then(res => this.setState({ category: res.data.category }))
-  //     .catch(console.error)
-  // }
+
   componentDidMount () {
     axios(`${apiUrl}/teachers/${this.props.match.params.id}`, {
       method: 'GET',
@@ -44,7 +40,7 @@ class TeacherEdit extends Component {
       const updatedField = { [event.target.name]: event.target.value }
 
       const editedTeacher = Object.assign({}, prevState.teacher, updatedField)
-      return { category: editedTeacher }
+      return { teacher: editedTeacher }
     })
   }
 

@@ -44,8 +44,7 @@ class TeacherCreate extends Component {
       },
       data: { teacher: this.state.teacher }
     })
-    //     .then(res => this.setState({ createdId: res.data.category._id }))
-    //     .catch(console.error)
+
     // }
       .then(res => {
         this.props.msgAlert({
@@ -64,7 +63,6 @@ class TeacherCreate extends Component {
   }
 
   render () {
-    // destructure  category to show in the form below, and createdId to redirect
     const { teacher, createdId } = this.state
     const { handleChange, handleSubmit } = this
 
@@ -78,7 +76,7 @@ class TeacherCreate extends Component {
     return (
       <div>
         <TeacherForm
-          category={teacher}
+          teacher={teacher}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           cancelPath='/'

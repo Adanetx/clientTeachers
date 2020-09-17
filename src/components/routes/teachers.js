@@ -29,7 +29,7 @@ class Teachers extends Component {
     })
       .then(res => this.setState({ teachers: res.data.teachers }))
       .then(res => this.props.msgAlert({
-        heading: 'categories listed Successfully',
+        heading: 'listed Successfully',
         message: messages.teachersListedeSuccess,
         variant: 'success'
       }))

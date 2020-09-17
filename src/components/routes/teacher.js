@@ -55,9 +55,8 @@ class Teacher extends Component {
 
   render () {
     const { teacher, deleted } = this.state
-    // if we do not have category (category is null)
     //
-    // console.log(category)
+    // console.log(teacher)
     if (!teacher) {
       return <p>Loading...</p>
     }
@@ -73,8 +72,8 @@ class Teacher extends Component {
     const owner = (this.props.user._id === this.state.teacher.owner)
     return (
       <div className='long'>
-        <h3>Category:</h3>
-        <div className='category'>
+        <h3>Teacher:</h3>
+        <div className='teacher'>
           <h4>{teacher.name}</h4>
           <p>{teacher.age}</p>
           <p>{teacher.sex}</p>
@@ -85,7 +84,7 @@ class Teacher extends Component {
               <Link to={`/teachers/${this.props.match.params.id}/edit`}>
                 <OutlineButton variant="outline-info" size="size">Edit</OutlineButton>
               </Link>
-              <OutlineButton variant= "outline-danger" size="sm" onClick={this.destroyTeacher}>Delete Category</OutlineButton>
+              <OutlineButton variant= "outline-danger" size="sm" onClick={this.destroyTeacher}>Delete teacher</OutlineButton>
             </React.Fragment>)
             : ' ' }
         </div>

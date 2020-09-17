@@ -9,6 +9,11 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 
+import teachers from '../routes/teachers'
+import teacherCreate from '../routes/teacherCreate'
+import teacher from '../routes/teacher'
+import teacherEdit from '../routes/teacherEdit'
+
 class App extends Component {
   constructor () {
     super()
@@ -54,6 +59,18 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-pw' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} exact path='/teachers' render={ () => (
+            <teachers user={user} msgAlert={this.msgAlert} setCreatedId={this.setCreatedId}/>
+          )}/>
+          <AuthenticatedRoute user={user} exact path='/teachers-create' render={ () => (
+            <teacherCreate user={user} msgAlert={this.msgAlert} setCreatedId={this.setCreatedId}/>
+          )}/>
+          <AuthenticatedRoute user={user} exact path='/teachers/:id' render={ (props) => (
+            <teacher {...props} user={user} msgAlert={this.msgAlert} setDeleted={this.setDeleted}/>
+          )}/>
+          <AuthenticatedRoute user={user} exact path='/teachers/:id/edit' render={ (props) => (
+            <teacherEdit {...props} user={user} msgAlert={this.msgAlert} setUpdated={this.setUpdated}/>
+          )}/>
         </main>
       </Fragment>
     )
