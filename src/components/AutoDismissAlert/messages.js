@@ -9,10 +9,10 @@ export default {
   teacherCreatedSuccess: '👍',
   teacherCreatedFailure: 'Please fill out all forms 😩',
   teacherEditSuccess: '',
-  teacherEditFailure: 'Only creator can edit this category',
+  teacherEditFailure: 'Only creator can edit this teacher',
   teacherIndexFailure: 'Oops... Try again',
-  teacherDeleteSuccess: 'Start a new category! 📝',
-  teacherDeleteFailure: 'Only creator can delete this category',
+  teacherDeleteSuccess: 'Start a new teacher! 📝',
+  teacherDeleteFailure: 'Only creator can delete this teacher',
   teachersListedeSuccess: 'congratulation! 📝'
 
 }
