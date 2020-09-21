@@ -1,6 +1,6 @@
 {
   "name": "clientTeachers",
-  "homepage": "https://adanetx.github.io/clientTeachers/",
+  "homepage": "https://adanetx.github.io/clientTeachers",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
