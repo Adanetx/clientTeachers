@@ -17,7 +17,7 @@ class TeacherCreate extends Component {
         age: '',
         sex: '',
         favorite_course: '',
-        eduction: ''
+        education: ''
       },
       createdId: null
     }
@@ -37,7 +37,7 @@ class TeacherCreate extends Component {
   handleSubmit = event => {
     event.preventDefault()
     axios({
-      url: `${apiUrl}/teachers`,
+      url: `${apiUrl}/teachers/`,
       method: 'POST',
       headers: {
         'Authorization': `Token ${this.props.user.token}`

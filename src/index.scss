@@ -1,1 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
+
+.home {
+  border-left-style: solid;
+  border-width: 5px;
+  border-color: blue;
+  border-radius: 5px;
+  background-color: #cfecff;
+  font-size: 20px;
+  font-family: 'Merriweather Sans', sans-serif;
+  padding: 5px 0px 5px 10px;
+  width: 400px;
+  height: 115px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -205px;
+}
+
+form {
+  border-left-style: solid;
+  border-width: 5px;
+  border-color: green;
+  border-radius: 5px;
+  background-color: #92a8d1;
+  font-size: 20px;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 20px 0px 20px 0px;
+  padding: 5px 0px 10px 10px;
+  width: 600px;
+}
+
+body {
+  font-size: 10px;
+  font-weight: 60;
+  font-style: italic;
+  background-color: #aff
+
+}

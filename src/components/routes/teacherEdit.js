@@ -16,14 +16,14 @@ class TeacherEdit extends Component {
         age: '',
         sex: '',
         favorite_course: '',
-        eduction: ''
+        education: ''
       },
       updated: false
     }
   }
 
   componentDidMount () {
-    axios(`${apiUrl}/teachers/${this.props.match.params.id}`, {
+    axios(`${apiUrl}/teachers/${this.props.match.params.id}/`, {
       method: 'GET',
       headers: {
         'Authorization': `Token ${this.props.user.token}`
@@ -47,7 +47,7 @@ class TeacherEdit extends Component {
   handleSubmit = event => {
     event.preventDefault()
     axios({
-      url: `${apiUrl}/teachers/${this.props.match.params.id}`,
+      url: `${apiUrl}/teachers/${this.props.match.params.id}/`,
       method: 'PATCH',
       headers: {
         'Authorization': `Token ${this.props.user.token}`
@@ -88,7 +88,6 @@ class TeacherEdit extends Component {
           teacher ={teacher}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          // cancelPath={`/categories/${this.props.match.params.id}`}
           cancelPath={`/teachers/${this.props.match.params.id}`}
         />
       </div>

@@ -5,7 +5,7 @@ import apiUrl from '../../apiConfig'
 import axios from 'axios'
 import { withRouter } from 'react-router'
 import messages from '../AutoDismissAlert/messages'
-
+// import Dropdown from 'react-bootstrap/Dropdown'
 class Teacher extends Component {
   constructor (props) {
     // this makes sure that `this.props` is set in the constructor
@@ -22,10 +22,10 @@ class Teacher extends Component {
 
   componentDidMount () {
     axios({
-      url: `${apiUrl}/teachers/${this.props.match.params.id}`,
+      url: `${apiUrl}/teachers/${this.props.match.params.id}/`,
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       }
     })
       .then(res => this.setState({ teacher: res.data.teacher }))
@@ -34,22 +34,20 @@ class Teacher extends Component {
 
   destroyTeacher = () => {
     axios({
-      url: `${apiUrl}/teachers/${this.props.match.params.id}`,
+      url: `${apiUrl}/teachers/${this.props.match.params.id}/`,
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${this.props.user.token}`
+        'Authorization': `Token ${this.props.user.token}`
       }
     })
-      // update their `deleted` state to be `true`
-    //     .then(() => this.setState({ deleted: true }))
-    //     .catch(console.error)
-      // }
+
       .then(() => this.setState({ deleted: true }))
       .then(res => this.props.msgAlert({
         heading: 'teacher Deleted Successfully',
         message: messages.teacherDeleteSuccess,
         variant: 'success'
       }))
+      .then(() => { return <Redirect to='/teachers' /> })
       .catch(console.error)
   }
 

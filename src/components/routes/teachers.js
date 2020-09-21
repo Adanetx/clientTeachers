@@ -4,6 +4,11 @@ import apiUrl from '../../apiConfig'
 import axios from 'axios'
 import { withRouter } from 'react-router'
 import messages from '../AutoDismissAlert/messages'
+// import OutlineButton from 'react-bootstrap/Button'
+// import Card from 'react-bootstrap/Card'
+// import Container from 'react-bootstrap/Container'
+// import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col'
 
 // This will be our Books Index component (show all books)
 class Teachers extends Component {
@@ -12,16 +17,13 @@ class Teachers extends Component {
 
     // setup our initial state
     this.state = {
-      // we have zero books, until our API request has finished
       teachers: []
     }
   }
 
-  // this is called whenever our component is created and inserted
-  // into the DOM (first appears)
   componentDidMount () {
     axios({
-      url: `${apiUrl}/teachers`,
+      url: `${apiUrl}/teachers/`,
       method: 'GET',
       headers: {
         'Authorization': `Token ${this.props.user.token}`
@@ -45,17 +47,21 @@ class Teachers extends Component {
     const teachers = null
     if (this.state.teachers) {
       const teachers = this.state.teachers.map(teacher => (
-        <div key={teacher._id} className='teachers'>
+        <div key={teacher._id} className='teacherCreatedSuccess'>
           <Link to={`/teachers/${teacher._id}`}>
-            {teacher.name}
+          name = {teacher.name}{',   '}
           </Link>
+        age = {teacher.age}{',   '}
+      sex = {teacher.sex}{',   '}
+      favorite course = {teacher.favorite_course}{',   '}
+        education = {teacher.education} {',   '}
         </div>
       ))
       return teachers
     }
     return (
       <div className='long'>
-        <h1>Teachers</h1>
+        <h1>teachers</h1>
         {teachers}
       </div>
     )
