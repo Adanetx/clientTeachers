@@ -70,7 +70,7 @@ class TeacherCreate extends Component {
     if (createdId) {
       // redirect to the show page (route)
       console.log(teacher)
-      return <Redirect to={`/teachers/${createdId}`} />
+      return <Redirect to={'/teachers/'} />
     }
 
     return (

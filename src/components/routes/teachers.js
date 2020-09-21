@@ -47,8 +47,8 @@ class Teachers extends Component {
     const teachers = null
     if (this.state.teachers) {
       const teachers = this.state.teachers.map(teacher => (
-        <div key={teacher._id} className='teacherCreatedSuccess'>
-          <Link to={`/teachers/${teacher._id}`}>
+        <div key={teacher.id} className='teacherCreatedSuccess'>
+          <Link to={`/teachers/${teacher.id}`}>
           name = {teacher.name}{',   '}
           </Link>
         age = {teacher.age}{',   '}

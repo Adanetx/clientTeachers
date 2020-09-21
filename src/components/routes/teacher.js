@@ -28,6 +28,7 @@ class Teacher extends Component {
         'Authorization': `Token ${this.props.user.token}`
       }
     })
+
       .then(res => this.setState({ teacher: res.data.teacher }))
       .catch(console.error)
   }
@@ -54,7 +55,6 @@ class Teacher extends Component {
   render () {
     const { teacher, deleted } = this.state
     //
-    // console.log(teacher)
     if (!teacher) {
       return <p>Loading...</p>
     }
@@ -67,24 +67,20 @@ class Teacher extends Component {
         state: { message: 'Deleted teacher successfully' }
       }} />
     }
-    const owner = (this.props.user._id === this.state.teacher.owner)
+    // const owner = (this.props.user._id === this.state.teacher.owner)
     return (
       <div className='long'>
-        <h3>Teacher:</h3>
-        <div className='teacher'>
-          <h4>{teacher.name}</h4>
-          <p>{teacher.age}</p>
-          <p>{teacher.sex}</p>
-          <p>{teacher.favorite_course}</p>
-          <p>{teacher.eduction}</p>
-          {owner ? (
-            <React.Fragment>
-              <Link to={`/teachers/${this.props.match.params.id}/edit`}>
-                <OutlineButton variant="outline-info" size="size">Edit</OutlineButton>
-              </Link>
-              <OutlineButton variant= "outline-danger" size="sm" onClick={this.destroyTeacher}>Delete teacher</OutlineButton>
-            </React.Fragment>)
-            : ' ' }
+        <h3>singgle teacher:</h3>
+        <div className='category'>
+          <h4>name: {teacher.name}</h4>
+          <p>  age: {teacher.age}</p>
+          <p> sex: {teacher.sex}</p>
+          <p>favorite course{teacher.favorite_course}</p>
+          <p>level of education:{teacher.education}</p>
+          <Link to={`/teachers/${this.props.match.params.id}/edit`}>
+            <OutlineButton variant="outline-info" size="size">Edit</OutlineButton>
+          </Link>
+          <OutlineButton variant= "outline-danger" size="sm" onClick={this.destroyTeacher}>Delete</OutlineButton>
         </div>
       </div>
     )
