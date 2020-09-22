@@ -37,7 +37,8 @@ this is
 
 ## Installation and setup process  for frontEnd
 
- - down load react- auth- template from [download](https://git.generalassemb.ly/ga-wdi-boston/react-auth-template)
+ - down load react- auth- template from [github-page](https://git.generalassemb.ly/ga-wdi-boston/react-auth-template)
+ - git clone or download
  - un zip the File
  - git in it
  - replace readme.md file by my own .
