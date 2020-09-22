@@ -15,25 +15,31 @@
   top: 50%;
   left: 50%;
   margin: -125px 0 0 -205px;
+
 }
 
 form {
   border-left-style: solid;
   border-width: 5px;
   border-color: green;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #92a8d1;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Merriweather Sans', sans-serif;
   margin: 20px 0px 20px 0px;
   padding: 5px 0px 10px 10px;
-  width: 600px;
+  width: 300px;
+  box-sizing: border-box;
+
 }
 
 body {
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 60;
-  font-style: italic;
+  font-family: 'Merriweather Sans', sans-serif;
   background-color: #aff
 
+}
+header{
+  font-size: 20px;
 }

@@ -4,8 +4,8 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href='#teachers'> teachers </Nav.Link>
-    <Nav.Link href='#teacher-create'> Create teacher </Nav.Link>
+    <Nav.Link href='#teachers'>All lists </Nav.Link>
+    <Nav.Link href='#teacher-create'>create new </Nav.Link>
     <Nav.Link href="#change-pw">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
@@ -27,7 +27,7 @@ const alwaysOptions = (
 const Header = ({ user }) => (
   <Navbar bg="primary" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      React ⚛️ Teachers list
+      Our Collage Teachers list
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

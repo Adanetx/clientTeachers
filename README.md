@@ -4,6 +4,11 @@ This Application is used to list the teachers in collage, this app is very nice 
 manage the workers(teachers) in a collage it conatains the detatil information of  the teachers name, age, favorite courese, level of education etc ..
 this is
 
+## important links
+[client side repository](https://github.com/Adanetx/clientTeachers)
+[Deployed app]()
+[Api Repo](https://github.com/Adanetx/Teachers)
+
 ## user stories
 
 - 'As an unregistered user, I would like to sign up with email and password.
@@ -24,6 +29,33 @@ this is
 - html
 - scss
 - axios
+- git
+- github
+
+## Installation and setup process  for frontEnd
+
+ - down load react- auth- template from [](https://git.generalassemb.ly/ga-wdi-boston/react-auth-template)
+ - un zip the File
+ - git in it
+ - replace readme.md file by my own .
+ - replace  react-auth-template in package.json by my project name
+ - install npm package
+ - then git and commit
+ - Run the development server with `npm start`
+
+
+ ## Tasks
+
+ Developers should run these often!
+
+ - `npm run nag`: runs code quality analysis tools on your code and complains.
+ - `npm run make-standard`: reformats all your code in the JavaScript Standard
+   Style.
+ - `npm run start`: generates bundles, watches, and livereloads.
+ - `npm run build`: place bundled styles and scripts where `index.html` can find
+     them
+ - `npm run deploy`: builds and deploys master branch
+
 
 ## catalog of Rutes  of the teachers
 
@@ -41,5 +73,14 @@ Verb   | URI Pattern            |
 
 - still it need more style
 - add more relations ...
+- need buttons
 
 ## Images
+
+
+### wire frame
+
+![](https://i.imgur.com/ql4Eq1c.png)
+
+## temporary screenshot
+![screenshot](https://i.imgur.com/Vhx3iTf.png)

@@ -54,7 +54,7 @@ class TeacherCreate extends Component {
         })
         return res
       })
-      .then(res => this.setState({ createdId: res.data.teacher._id }))
+      .then(res => this.setState({ createdId: res.data.teacher.id }))
       .catch(res => this.props.msgAlert({
         heading: 'teacher Create Failed',
         message: messages.teacherCreatedFailure,
