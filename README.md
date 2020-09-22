@@ -6,8 +6,11 @@ this is
 
 ## important links
 [client side repository](https://github.com/Adanetx/clientTeachers)
+
 [Deployed app]()
+
 [Api Repo](https://github.com/Adanetx/Teachers)
+
 
 ## user stories
 

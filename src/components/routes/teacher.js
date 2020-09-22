@@ -72,11 +72,11 @@ class Teacher extends Component {
       <div className='long'>
         <h3>singgle teacher:</h3>
         <div className='category'>
-          <h4>name: {teacher.name}</h4>
+          <h6>name: {teacher.name}</h6>
           <p>  age: {teacher.age}</p>
           <p> sex: {teacher.sex}</p>
-          <p>favorite course{teacher.favorite_course}</p>
-          <p>level of education:{teacher.education}</p>
+          <p>favorite course: {teacher.favorite_course}</p>
+          <p>level of education: {teacher.education}</p>
           <Link to={`/teachers/${this.props.match.params.id}/edit`}>
             <OutlineButton variant="outline-info" size="size">Edit</OutlineButton>
           </Link>
